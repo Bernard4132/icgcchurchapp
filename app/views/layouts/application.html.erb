@@ -5,20 +5,424 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
     <script src="https://use.fontawesome.com/fc6d352727.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Istok+Web:400,400i,700,700i|Oleo+Script:400,700|Paytone+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:300,400,600,700" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style type="text/css">
+  a {
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+nav{
+  padding: 3px;
+}
+
+  
+      .navbackground{
+    background-color: transparent;
+  }
+
+  .meffect{
+    background: url(https://res.cloudinary.com/nikasemo/image/upload/v1537494656/navbgback_j2ojki.png);
+    -webkit-box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.5);
+-moz-box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.5);
+box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.5);
+}
+
+.navbar-brand1 {
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+  text-shadow: 1px 1px 2px rgba(150, 150, 150, 0.9);
+}
+
+
+
+
+.navbar-light .navbar-brand1{
+color: white;
+font-weight: 700;
+font-family: 'Poppins', sans-serif;
+
+}
+
+.navbar-scroll{
+color: #000; 
+font-weight: 700;
+font-family: 'Poppins', sans-serif;
+}
+
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+  color: white;
+}
+
+.navbar-light .navbar-scroll:focus, .navbar-light .navbar-scroll:hover {
+  color: #343a40;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #012f1c;
+  font-size: 13px;
+  /*text-shadow: 1px 1px 2px rgba(150, 150, 150, 0.9);*/
+  font-weight: 300;
+  font-family: 'Open Sans', sans-serif;
+  transition: border-color .5s ease-in-out;
+    -webkit-transition: border-color .5s ease-in-out;
+    -moz-transition: border-color .5s ease-in-out;
+  border-bottom: 4px solid transparent;
+}
+
+.navlinkscroll{
+  color: #343a40;
+  
+}
+
+.navbar-light .navbar-nav .nav-link:focus {
+  color: #e2b500;
+  font-weight: 500;
+ 
+}
+
+ .navbar-light .navbar-nav .nav-link:hover {
+  color: #e2b500;
+  font-weight: 500;
+  
+}
+
+.navbar-light .navbar-nav .nav-link.disabled {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.navbar-light .navbar-nav .show > .nav-link,
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .nav-link.active {
+  color: #e2b500;
+  font-weight: 600;
+  padding-bottom: 8px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 10rem;
+  padding: 0;
+  margin: 0.125rem 0 0;
+  font-size: 13px;
+  font-weight: 300;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ffffff;
+  border-radius: 0rem;
+  -webkit-box-shadow: 0px 1px 5px 4px rgba(0,0,0,0.14);
+-moz-box-shadow: 0px 1px 5px 4px rgba(0,0,0,0.14);
+box-shadow: 0px 1px 5px 4px rgba(0,0,0,0.14);
+font-family: 'Open Sans', sans-serif;
+}
+
+.dropdown-divider {
+  height: 0;
+  margin: 0.5rem 0;
+  overflow: hidden;
+  border-top: 1px solid #e9ecef;
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  clear: both;
+  font-weight: 300;
+  color: #000000;
+  text-align: inherit;
+  white-space: nowrap;
+  background: none;
+  border: 0;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: rgba(3, 78, 49, 0.8);
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #034e31;
+}
+
+.dropdown-item.disabled, .dropdown-item:disabled {
+  color: #dc3545;
+  background-color: transparent;
+}
+
+.topbeforenav {
+	  font-family: 'Open Sans', sans-serif;
+	  background-color: #034e31;
+	  height: auto;
+	  padding-top: 6px;
+	  padding-left: 5px;
+	  padding-bottom: 5px;
+	}
+
+.foothead {
+  color: white;
+  font-weight: 500;
+  font-family: 'Raleway', sans-serif;
+}
+
+.imagebg{
+    background:linear-gradient(0deg,rgba(3, 78, 49,0.96),rgba(3, 78, 49,0.96)),url('https://res.cloudinary.com/nikasemo/image/upload/v1537497932/dot-pattern-1111_gfakse.png');
+}
+
+</style>
+
   </head>
+
+
+      <section class="topbeforenav">
+  <div class="row">
+    <div class="col-lg-5 ml-auto">
+      <span style="color: white; font-size: 12px; font-weight: 300;">
+        <span><i class="fa fa-envelope-o" aria-hidden="true"></i> hello@icgcvirginiabeach.com</span>
+        &nbsp;&nbsp;
+        <span><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;<i class="fa fa-whatsapp" aria-hidden="true"></i> 757-305-8433 / 757-305-8433</span>
+
+      </span>
+    </div>
+  </div>
+</section>
+<!-- Navigation -->
+    <nav class="navbar navbar-light navbar-expand-lg meffect">
+      <div class="container">
+        <a class="navbar-brand1" href="/" style=""><img src="https://res.cloudinary.com/nikasemo/image/upload/v1537495786/icgclogo_ne0v1e.png" width="227px" height="50px" 
+          style="margin-right:0px; margin-top: 0px;"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item <%= 'active' if current_page?(root_path) %>">
+              <a class="nav-link" href="/">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item dropdown <%= 'active' if current_page?(aboutchurch_path) %>">
+               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          About Us 
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/aboutchurch">About the Church</a>
+          <a class="dropdown-item" href="/aboutpastor">The Head Pastor</a>
+          <a class="dropdown-item" href="/aboutgenoverseer">General Overseer</a>
+          <a class="dropdown-item" href="/churchleadership">Church leadership</a>
+        </div>
+            </li>
+            <li class="nav-item dropdown <%= 'active' if current_page?(childrensministry_path) %>">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Departments 
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/mensministry">Men's Ministry</a>
+          <a class="dropdown-item" href="/womensministry">Women's Ministry</a>
+          <a class="dropdown-item" href="/childrensministry">Children's Ministry</a>
+          <a class="dropdown-item" href="/musicminsitry">Music Ministry</a>
+          <a class="dropdown-item" href="/usheringandprotocolministry">Ushering and Protocol</a>
+          <a class="dropdown-item" href="/prayerministry">Prayer Ministry</a>
+          <a class="dropdown-item" href="/beablessingministry">Be a Blessing Ministry</a>
+        </div>
+      </li>
+         
+            <li class="nav-item">
+              <a class="nav-link" href="#!">Announcements</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#!">Devotionals</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="#!">Audio Messages</a>
+            </li>
+             <li class="nav-item <%= 'active' if current_page?(churchgallery_path) %>">
+              <a class="nav-link" href="/churchgallery">Gallery</a>
+            </li>
+              <li class="nav-item dropdown <%= 'active' if current_page?(contactform_path) %>">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Contact Us
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/contactform">Contact Us form</a>
+          <a class="dropdown-item" href="/prayerrequester">Prayer Request</a>
+        </div>
+      </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
   <body>
 
     <%= yield %>
 
+    <footer class="py-5 imagebg">
+      <div class="container">
+        <div class="row">
+        <div class="col-lg-3">
+          <div class="innerfooter">
+            <h5 class="foothead">About Us</h5>
+            <ul style="list-style:none; padding-left:0;">
+            <li><a href="/aboutchurch" style="color: white; font-weight: 300; font-size: 14px; text-decoration:none;">About the Church</a></li>
+            <li><a href="/aboutpastor" style="color: white; font-weight: 300; font-size: 14px; text-decoration:none;">About the Pastor</a></li>
+            <li><a href="/aboutgenoverseer" style="color: white; font-weight: 300; font-size: 14px; text-decoration:none;">About the General Overseer</a></li>
+            <li><a href="/churchleadership" style="color: white; font-weight: 300; font-size: 14px; text-decoration:none;">Church Leadership</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="innerfooter">
+            <h5 class="foothead">Departments</h5>
+            <ul style="list-style:none; padding-left:0;">
+            <li><a href="/mensministry" style="color: white; font-weight: 300; font-size: 14px; text-decoration:none;">
+            Men's Ministry</a></li>
+            <li><a href="/womensministry" style="color: white; font-weight: 300; font-size: 14px; text-decoration:none;">
+            Women's Ministry</a></li>
+            <li><a href="/childrensministry" style="color: white; font-weight: 300; font-size: 14px; text-decoration:none;">
+            Children's Ministry</a></li>
+            <li><a href="/musicminsitry" style="color: white; font-weight: 300; font-size: 14px; text-decoration:none;">
+            Music Ministry</a></li>
+            <li><a href="/usheringandprotocolministry" style="color: white; font-weight: 300; font-size: 14px; text-decoration:none;">
+            Ushering and Protocol</a></li>
+            <li><a href="/prayerministry" style="color: white; font-weight: 300; font-size: 14px; text-decoration:none;">
+            Prayer Ministry</a></li>
+            <li><a href="/beablessingministry" style="color: white; font-weight: 300; font-size: 14px; text-decoration:none;">
+            Be a Blessing Ministry</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="innerfooter">
+            <h5 class="foothead">Other Links</h5>
+            <ul style="list-style:none; padding-left:0;">
+            <li><a href="/announcements" style="color: white; font-weight: 300; font-size: 14px; text-decoration:none;">Announcements</a></li>
+            <li><a href="/posts" style="color: white; font-weight: 300; font-size: 14px; text-decoration:none;">Devotionals</a></li>
+            <li><a href="/churchgallery" style="color: white; font-weight: 300; font-size: 14px; text-decoration:none;">
+            Church Gallery</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="innerfooter">
+             <h5 class="foothead">Contact Us</h5>
+             <ul style="list-style:none; padding-left:0;">
+             <li><a href="/contactform" style="color: white; font-weight: 300; font-size: 14px; text-decoration:none;">
+            Contact Us</a></li>
+            <li><a href="/prayerrequester" style="color: white; font-weight: 300; font-size: 14px; text-decoration:none;">
+            Prayer Request</a></li>
+          </ul>
+          <span style="color: white;">Social Media</span><br>
+             <span><a href=""><i class="fa fa-facebook-official" style="color: white; margin-right: 5px;" aria-hidden="true"></i></a></span>
+             <span><a href=""><i class="fa fa-twitter-square" style="color: white; margin-right: 5px;" aria-hidden="true"></i></a></span>
+             <span><a href=""><i class="fa fa-instagram" style="color: white; margin-right: 5px;" aria-hidden="true"></i></a></span>
+             <span><a href=""><i class="fa fa-google-plus-square" style="color: white; margin-right: 5px;" aria-hidden="true"></i></a></span>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 30px;">
+        <div class="col-sm-12">
+        <p class="m-0 text-center text-white">Copyright &copy; ICGC Virginia beach, 2018</p>
+      </div>
+    </div>
+      </div>
+      <!-- /.container -->
+    </footer>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js.map"></script>
+
+<script type="text/javascript">
+  $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                event.preventDefault();
+                $(this).ekkoLightbox();
+            });
+</script>
+
+<script type="text/javascript">
+  (function( $ ) {
+
+    $.fn.scrollReveal = function() {
+
+        //get viewport size
+        var windowHeight = $(window).height(),
+            windowWidth = $(window).width(),
+            initialScroll = $(window).scrollTop(),
+            items = $('.js-reveal'),
+            scroll;
+
+        //hide anything not in the viewport
+        items.each(function(){
+            if($(this).offset().top >= windowHeight){
+                $(this).addClass('js-reveal--hidden');
+            }
+        });
+
+        //on scroll
+        $(window).scroll(function (event) {
+            //get the current scroll position
+            scroll = $(window).scrollTop();
+            //show anything that is now in view (scroll + windowHeight)
+            items.each( function(){
+                if($(this).offset().top <= (scroll + windowHeight)){
+                    $(this).removeClass('js-reveal--hidden');
+                }
+            });
+        });
+
+        return this;
+    };
+}( jQuery ));
+
+</script>
+
+ <script type="text/javascript">
+  
+$('ul.navbar-nav li.dropdown').hover(function() {
+  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+}, function() {
+  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+});
+
+</script>
+
+<script type="text/javascript">
+$.fn.scrollReveal(); 
+    </script>
+
   </body>
 </html>

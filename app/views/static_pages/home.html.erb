@@ -1,60 +1,399 @@
 <style type="text/css">
+	.homeslider {
+  
+  top: 30px;
+}
 
-	.homelandingsect1{
-		background:linear-gradient(0deg,rgba(0,0,0,0.7),rgba(0,0,0,0.65)), url('https://res.cloudinary.com/nikasemo/image/upload/v1535228685/gworks_ycofcs.jpg'); background-position:center;
-		background-size: cover; 
-		background-position: center center; 
-		background-repeat: no-repeat;
-		height: 650px;
-	}
-
-	.landrowtop{
-		padding-top: 50px;
-		padding-left: 20px;
-		padding-right: 20px;
-	}
-
-	.beblessedhead {
-		text-align: center;
-		color: white;
-		font-size: 60px;
-		font-family: 'Paytone One', sans-serif;
-		text-shadow: 0px 1px 13px rgba(0, 0, 0, 0.5);
-	}
-
-	.beblessedp {
-		text-align: center;
-		color: white;
-		font-size: 18px;
-		font-family: 'Josefin Slab', serif;
-		font-weight: 300;
-		text-shadow: 0px 1px 13px rgba(0, 0, 0, 0.5);
-	}
-
-	.beblessedpweb {
-		text-align: center;
-		color: white;
-		font-size: 18px;
-		font-family: 'Josefin Slab', serif;
-		font-weight: 600;
-		text-shadow: 0px 1px 13px rgba(0, 0, 0, 0.5);
-	}
-
-</style> 
+.carousel {
+position: relative;
+top: 0px;
+}
 
 
 
-<section class="homelandingsect1">
-<div class="container">
-	<div class="row landrowtop">
-		  <div class="col-lg-12">
-		  	<p style="text-align: center;"><img src="https://res.cloudinary.com/nikasemo/image/upload/v1535228434/logoicgccopy_dnyq4r.png" class="img-fluid"></p>
-		     <h2 class="beblessedhead">ICGC</h2>
-		     <br>
-		     <p class="beblessedp">Through our programs, we trust to make the lives of our people<br> better than before they came to Church, and redirect their perception and behaviour in conformity<br> with God's word. This attitude which is based on the word of God will transform the lives<br> of people in their communities, work place, schools etc.</p>
-		     <br>
-		     <p class="beblessedpweb"><i class="fa fa-home" aria-hidden="true"></i> Website launching soon <a href="http://www.icgc-branchname.org" style="color: white;" target="_blank">www.icgc-branchname.org</a></p>
-	      </div>
-		</div>
-	</div>
+    .carousel-item{
+      min-height:600px;
+      background:no-repeat center center scroll;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover}
+
+    .carousel-inner {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
+.carousel-caption {
+  position: absolute;
+  right: 15%;
+  bottom: 150px;
+  left: 15%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: right;
+  color: #fff;
+  text-align: center;
+}
+
+.capttxt {
+  color: #ffffff;
+  font-size: 35px;
+  font-weight: 500;
+  font-family: 'Raleway', sans-serif;
+  text-align: right;
+}
+
+.announcementscroll {
+    font-family: 'Raleway', sans-serif;
+	background-color: #e2b500;
+	padding: 5px;
+	font-size: 14px;
+	border-top: 2px solid #a28203;
+	border-bottom: 1.8px solid #a28203;
+}
+
+.divederlined {
+  height: 1.5px;
+  background-color: #e2b500; 
+}
+
+.divederlineder {
+  height: 1.5px;
+  background-color: #ffffff; 
+}
+
+.newsletterholder {
+  background-color: #034e31;
+}
+
+.btnhomeslider {
+  background-color: transparent;
+  border: 1.5px solid white;
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  font-family: 'Exo 2', sans-serif;
+}
+
+.btnhomeslider:hover {
+  background-color: transparent;
+  border: 1.5px solid #e2b500;
+  border-radius: 10px;
+  color: #fdbd1e;
+  font-size: 18px;
+  font-family: 'Exo 2', sans-serif;
+}
+
+.btnhomeslider:active {
+  background-color: transparent;
+  border: 1.5px solid #e2b500;
+  border-radius: 10px;
+  color: #fdbd1e;
+  font-size: 18px;
+  font-family: 'Exo 2', sans-serif;
+}
+
+zoomin img {
+  height: 110px;
+  width: 110px;
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+
+.zoomin img:hover {
+  width: 180px;
+  height: 180px;
+}
+
+.image-box{
+  width:100%;
+  overflow:hidden;
+}
+.image {
+  width:100%;
+  height:250px;
+  
+  background:linear-gradient(0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.1)),url(https://res.cloudinary.com/nikasemo/image/upload/v1537505265/audiomessage1_yet5wc.jpg);
+  background-position:center;
+  transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+} 
+.image:hover {
+  transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2); /* IE 9 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=1.5, M12=0, M21=0, M22=1.5, SizingMethod='auto expand')"; /* IE8 */
+   filter: progid:DXImageTransform.Microsoft.Matrix(M11=1.5, M12=0, M21=0, M22=1.5, SizingMethod='auto expand'); /* IE6 and 7 */ 
+} 
+
+.image2 {
+  width:100%;
+  height:250px;
+  
+  background:linear-gradient(0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.1)),url(https://www.earnmydegree.com/sites/all/files/public/video-prod-image.jpg);
+  background-position:center;
+  transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+} 
+.image2:hover {
+  transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2); /* IE 9 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=1.5, M12=0, M21=0, M22=1.5, SizingMethod='auto expand')"; /* IE8 */
+   filter: progid:DXImageTransform.Microsoft.Matrix(M11=1.5, M12=0, M21=0, M22=1.5, SizingMethod='auto expand'); /* IE6 and 7 */ 
+} 
+
+.image1 {
+  width:100%;
+  height:250px;
+  
+  background:linear-gradient(0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.1)),url(http://3.bp.blogspot.com/-rL9PZ6_DO14/U0DgkLeMHCI/AAAAAAAAD6M/TEFO1GJW0Xc/s1600/raised-hands-in-worship.jpg);
+  background-position:center;
+  transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+} 
+.image1:hover {
+  transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2); /* IE 9 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=1.5, M12=0, M21=0, M22=1.5, SizingMethod='auto expand')"; /* IE8 */
+   filter: progid:DXImageTransform.Microsoft.Matrix(M11=1.5, M12=0, M21=0, M22=1.5, SizingMethod='auto expand'); /* IE6 and 7 */ 
+}
+
+.image3 {
+  width:100%;
+  height:250px;
+  
+  background:linear-gradient(0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.1)),url(https://joncoombs.files.wordpress.com/2012/08/640px-lancaster_baptist_church_main_auditorium.jpg);
+  background-position:center;
+  transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+} 
+.image3:hover {
+  transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2); /* IE 9 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=1.5, M12=0, M21=0, M22=1.5, SizingMethod='auto expand')"; /* IE8 */
+   filter: progid:DXImageTransform.Microsoft.Matrix(M11=1.5, M12=0, M21=0, M22=1.5, SizingMethod='auto expand'); /* IE6 and 7 */ 
+}
+
+.housedescribe{
+  text-align: center;
+}
+
+
+
+.housedescribe a{
+  text-align: center; 
+  position:relative; 
+  top: 110px;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 2px;
+  padding: 15px;
+}
+
+.housedescribe a:hover{
+  text-align: center; 
+  position:relative; 
+  top: 110px;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 2px;
+  border-bottom: 3px solid #ffffff;
+  padding: 15px;
+}
+
+</style>
+
+<section class="homeslidersect">
+	<header>
+			<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+
+          <!-- Slide Three - Set the background image for this slide in the line below -->
+           <div class="carousel-item active" style="background:linear-gradient(0deg,rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('https://res.cloudinary.com/nikasemo/image/upload/v1537501398/icgc1_pub0xt.jpg')">
+            <div class="carousel-caption d-md-block">
+              <h3 class="capttxt" style="text-shadow: 0px 4px 7px rgba(150, 150, 150, 0.65); text-align: left;">Welcome to ICGC Virginia Branch.</h3>
+              <p style="font-family: 'Exo 2', sans-serif; letter-spacing: 2px; text-shadow: 0px 4px 7px rgba(150, 150, 150, 0.65);text-align: left; font-weight: 300;">"For we are partners working together for God..." ~ 1 Corinthians 3:9 GNT</p>
+              <p style="text-align: left;"><a href="/aboutus" class="btn btn-primary btn-lg btnhomeslider">Learn More</a></p>
+            </div>
+          </div>
+
+
+          <!-- Slide Three - Set the background image for this slide in the line below -->
+           <div class="carousel-item" style="background:linear-gradient(0deg,rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('https://res.cloudinary.com/nikasemo/image/upload/v1537501398/icgc1_pub0xt.jpg')">
+            <div class="carousel-caption d-md-block">
+              <h3 class="capttxt" style="text-shadow: 0px 4px 7px rgba(150, 150, 150, 0.65); text-align: left;">Elit mollit occaecat ullamco deserunt.</h3>
+              <p style="font-family: 'Exo 2', sans-serif; letter-spacing: 2px; text-shadow: 0px 4px 7px rgba(150, 150, 150, 0.65);text-align: left; font-weight: 300;">"For we are labourers together with God..." ~ 1 Corinthians 3:9 KJV</p>
+              <p style="text-align: left;"><a href="/fulltime" class="btn btn-primary btn-lg btnhomeslider">Apply Now</a></p>
+            </div>
+          </div>
+         
+          <!-- Slide One - Set the background image for this slide in the line below -->
+          <div class="carousel-item" style="
+          background:linear-gradient(0deg,rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(https://res.cloudinary.com/nikasemo/image/upload/v1537501398/icgc1_pub0xt.jpg);"
+          >
+            <div class="carousel-caption d-md-block">
+              <h3 class="capttxt" style="text-shadow: 0px 4px 7px rgba(150, 150, 150, 0.65); text-align: left;">Elit mollit occaecat ullamco deserunt.</h3>
+              <p style="font-family: 'Exo 2', sans-serif; letter-spacing: 2px; text-shadow: 0px 4px 7px rgba(150, 150, 150, 0.65);text-align: left; font-weight: 300;">"O Lord our God, all this wealth that we have provided for building You a house for Your Holy Name comes from Your hand; everything belongs to You" ~ 1 Chronicles 29:16 </p>
+              <p style="text-align: left;"><a href="https://rave.flutterwave.com/pay/onetimedonation" class="btn btn-primary btn-lg btnhomeslider">Give</a></p>
+            </div>
+          </div>
+          
+           <!-- Slide Two - Set the background image for this slide in the line below -->
+           <div class="carousel-item" style="
+           background:linear-gradient(0deg,rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(https://res.cloudinary.com/nikasemo/image/upload/v1537501398/icgc1_pub0xt.jpg);">
+            <div class="carousel-caption d-md-block">
+              <h3 class="capttxt" style="text-shadow: 0px 4px 7px rgba(150, 150, 150, 0.65); text-align: left;">Elit mollit occaecat ullamco deserunt.</h3>
+              <p style="font-family: 'Exo 2', sans-serif; letter-spacing: 2px; text-shadow: 0px 4px 7px rgba(150, 150, 150, 0.65);text-align: left; font-weight: 300;">“Until the kingdoms of this world become the kingdoms of our Lord and of His Christ.” - Revelation 11:15</p>
+             
+            </div>
+          </div>
+
+         
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+		</header>
 </section>
+<section class="announcementscroll">
+	<marquee><span style="font-weight: 700; font-size: 16px; font-family: 'Raleway', sans-serif; margin-right: 5px;">Church Announcements : : : :</span> <span style="margin-right: 100px; font-family: 'Open Sans', sans-serif;">Church Service starts at 6pm today due to the weather.</span>  <span style="margin-right: 100px;">Choir ministrations will be from section 6. Bring your Hymn books.</span>  <span style="margin-right: 100px;">Do not forget your tithes and offerings as you come to the house of the Lord to worship.Stay Blessed!</span></marquee>
+</section>
+
+<section class="py-5 aboutwistech">
+      <div class="container">
+       
+        <div class ="row">
+          <div class="col-lg-9 col-sm-12">
+             <h2 style="font-family: 'Raleway', sans-serif; text-align: left; color: #034e31; font-size: 25px;" class="js-reveal">
+         Welcome to ICGC Virginia Beach</h2>
+        <hr align="left" width="10%" class="divederlined">
+           <p style="font-weight: 300; font-size: 14px; text-align: left; color: #000000; line-height: 24px;" class="js-reveal">
+           Minim aliquip consectetur sed culpa ut laboris enim laboris elit sit mollit mollit ut eiusmod reprehenderit tempor laboris reprehenderit in proident pariatur tempor deserunt qui tempor do consectetur proident aute in sint eiusmod commodo amet in minim ut anim incididunt non sint aliquip eiusmod deserunt excepteur incididunt consequat esse do ut adipisicing ut incididunt nulla in veniam ut in dolor incididunt qui non laboris ut veniam veniam veniam sint sed veniam duis nostrud esse commodo deserunt laboris non pariatur laboris esse reprehenderit ut excepteur cillum officia sint eiusmod in tempor est amet nisi dolor eiusmod est pariatur dolore elit amet elit dolore deserunt deserunt cupidatat nulla dolor magna adipisicing amet aliqua duis do do in enim aute dolor laborum sit consequat ea elit in aute qui anim aliquip magna do pariatur ad sunt est voluptate.
+           </p>
+          </div>
+          <div class="col-lg-3 col-sm-12">
+            <img src="https://res.cloudinary.com/nikasemo/image/upload/v1534594986/Untitled-5_0008_emma_lxmyeo.png" width="200px" height="200px" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </section>
+<section class="js-reveal newsletterholder" style="padding: 40px; margin-bottom: 0px;">
+       
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-md-offset-2">
+        <h3 style="font-family: 'Raleway', sans-serif; text-align: center; color: #ffffff;" class="js-reveal">
+      Stay Connected with your Church Family!  
+      </h3>
+      <hr align="center" width="10%" class="divederlineder">
+       <p style="font-weight: 300; font-size: 14px; text-align: center; color: #ffffff; font-family: 'Exo 2', sans-serif;" class="js-reveal">
+           Get daily inspiration from the word of God and connect with our family of faith!
+         </p>
+      <form class="form-inline mr-auto">
+  <div class="form-group mb-2">
+    <label for="staticEmail2" class="sr-only">Email</label>
+    <input type="text" class="form-control" id="staticEmail2" placeholder="Your Name">
+  </div>
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="inputPassword2" class="sr-only">Password</label>
+    <input type="password" class="form-control" id="inputPassword2" placeholder="Your Email">
+  </div>
+  <button type="submit" class="btn btn-primary btnhomeslider mb-2">Sign Up</button>
+</form>
+</p>
+    </div>
+    </div>
+    </div>
+  
+</section>
+
+<section>
+      
+      <div class="row no-gutters">
+      <div class="col-lg-3 zoomimgbg1">
+       <div class="image-box">
+  <div class="image">
+    <h3 class="housedescribe">
+    <a href="#!" style="text-decoration:none;">Audio Messages</a>
+    </h3>
+  </div>
+</div>
+      </div>
+
+      <div class="col-lg-3 zoomimgbg1">
+       <div class="image-box">
+  <div class="image2">
+    <h3 class="housedescribe">
+    <a href="#!" style="text-decoration:none;">Video Sermons</a>
+    </h3>
+  </div>
+</div>
+      </div>
+
+      <div class="col-lg-3 zoomimgbg2">
+       <div class="image-box">
+  <div class="image1">
+    <h3 class="housedescribe" style="">
+    <a href="#!" target="_blank" style="text-decoration:none;">Events</a>
+    </h3>
+  </div>
+</div>
+      </div>
+
+      <div class="col-lg-3 zoomimgbg2">
+       <div class="image-box">
+  <div class="image3">
+    <h3 class="housedescribe" style="">
+    <a href="#!" target="_blank" style="text-decoration:none;">Gallery</a>
+    </h3>
+  </div>
+</div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+

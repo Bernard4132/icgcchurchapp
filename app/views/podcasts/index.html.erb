@@ -1,0 +1,106 @@
+<script src="audio.min.js"></script>
+    <!-- <link rel="stylesheet" href="audiome.css"> -->
+    <script>
+      audiojs.events.ready(function() {
+        audiojs.createAll();
+      });
+    </script>
+<style type="text/css">
+
+.divederlined {
+  height: 1.5px;
+  background-color: #e2b500; 
+}
+
+  .imageshadow {
+    -webkit-box-shadow: 0px 3px 29px -4px rgba(0,0,0,0.53);
+-moz-box-shadow: 0px 3px 29px -4px rgba(0,0,0,0.53);
+box-shadow: 0px 3px 29px -4px rgba(0,0,0,0.53);
+  }
+
+ .aduins{
+ background:linear-gradient(0deg,rgba(0, 0, 0,0.1),rgba(0, 0, 0,0.3)),url(https://res.cloudinary.com/nikasemo/image/upload/v1537494656/navbgback_j2ojki.png);
+  background-position:center;
+  min-height: 50px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.aduinsh1 {
+      text-align: center; 
+      color: #034e31; 
+      position: relative; 
+      top: 0px; 
+      font-weight: 900;  
+      text-shadow: 1px 0px 3px rgba(0, 0, 0, 0.5); 
+      font-family: 'Raleway', sans-serif;
+      font-size: 50px; 
+      line-height: 50px;
+    }
+
+.aduinsp1 {
+  text-align: center; 
+  color: white; 
+  position: relative; 
+  top: 55px;
+}
+
+.announrow {
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #aeaeae;
+  padding: 20px;
+  -webkit-box-shadow: 0px 3px 29px -4px rgba(0,0,0,0.5);
+-moz-box-shadow: 0px 3px 29px -4px rgba(0,0,0,0.5);
+box-shadow: 0px 3px 29px -4px rgba(0,0,0,0.5);
+}
+
+</style>
+
+<body style="background-color: #eaeaea;">
+
+<section class="aduins">
+      <div class="container">
+        <div class="row" style="margin-top: 70px">
+          <div class="col-lg-12">
+            <h1 style="font-family: 'Raleway', sans-serif;" class="aduinsh1">
+             Podcasts
+            </h1>
+           <!--  <p style="" class="aduinsp1">
+              To be the best in business education and business research in Africa
+            </p> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+<section class="py-5 aboutwistech">    
+
+<div class="container">
+
+    <% @podcasts.each do |podcast| %>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row announrow" style="margin-bottom: 30px;">
+            <div class="col-lg-2">
+              <img src="http://dsuarts.com/wp-content/uploads/2015/09/Music-Placeholder-300x300.png" class="img-fluid imageshadow">
+            </div>
+            <div class="col-lg-10">
+              <h4 style="font-family: 'Raleway', sans-serif; color: #034e31; margin-top: 10px;"><%= podcast.title %></h4>
+              <hr align="left" width="10%" class="divederlined">
+              <audio src="<%= podcast.audiotrack %>" preload="auto"></audio>
+              <p style="font-family: 'Open Sans', sans-serif; font-weight: 500; font-size: 12px; margin-top: 20px;"><%= podcast.updated_at.strftime("%B %-d, %Y") %> | <a href="<%= podcast.audiotrack %>" download>Download</a> </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  
+
+<br>
+
+<%= link_to 'New Podcast', new_podcast_path %>
+</div>

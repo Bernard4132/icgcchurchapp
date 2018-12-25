@@ -1,6 +1,7 @@
 class StaticPagesController < ApplicationController
 
 def home
+	@newsletter = Newsletter.new
 end
 
 def project_tl	

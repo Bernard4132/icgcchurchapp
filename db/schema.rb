@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180923172913) do
+ActiveRecord::Schema.define(version: 20181225101841) do
+
+  create_table "announcements", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "image"
+    t.boolean  "showonhome",        default: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+    t.string   "announcementimage"
+  end
 
   create_table "contacts", force: :cascade do |t|
     t.string   "name"
@@ -21,6 +31,30 @@ ActiveRecord::Schema.define(version: 20180923172913) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "newsletters", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "podcasts", force: :cascade do |t|
+    t.string   "title"
+    t.string   "audiotrack"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "author"
+    t.string   "postimage"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.text     "shortdescription"
+  end
+
   create_table "prayerrequests", force: :cascade do |t|
     t.string   "name"
     t.string   "phonenumber"
@@ -28,6 +62,16 @@ ActiveRecord::Schema.define(version: 20180923172913) do
     t.text     "prayerrequesttext"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+  end
+
+  create_table "vlogs", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.text     "embed"
+    t.string   "author"
+    t.string   "vlogimage"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end

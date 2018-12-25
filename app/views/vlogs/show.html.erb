@@ -1,0 +1,115 @@
+
+<style type="text/css">
+  .blogpart{
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+   border-radius: 12px;
+}
+
+.holdemailform{
+  padding: 20px;
+  margin-bottom: 70px;
+  margin-top: 50px;
+  width: 100%;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+
+}
+
+.fbcol{
+  background-color: #034e31;
+  border: #034e31;
+}
+
+.fbcol:hover{
+  background-color: #034e31;
+  border: #034e31;
+}
+
+.fbcol:active{
+  background-color: #034e31;
+  border: #034e31;
+}
+
+</style>
+
+<body style="background-color: #eaeaea;">
+
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-sm-12">
+      <h3 style="color: #034e31; font-weight: 500;  text-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);"><%= @vlog.title %></h3>
+      <p style="font-weight: 300;"><%= @vlog.updated_at.strftime("%B %-d, %Y") %> </p>
+      <div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="<%= @vlog.embed %>" allowfullscreen></iframe>
+</div>
+<br>
+<p style="text-align: justify; font-weight: 300; font-size: 14px;">
+  <%= @vlog.description %>
+</p>
+
+
+<p style="font-size: 12px;">
+  <%= @vlog.author %>
+</p>
+
+<div class="holdemailform">
+  <h3 style="color: #034e31;">Join our Newsletter!</h3><br>
+  <p>Give us your email, be the first to watch and know about our events. You will surely be blessed!</p>
+     <%= form_for(@newsletter, :html => {:class => "form-inline mr-auto"}) do |f| %>
+  <% if @newsletter.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@newsletter.errors.count, "error") %> prohibited this newsletter from being saved:</h2>
+
+      <ul>
+      <% @newsletter.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group mb-2">
+    <label for="staticEmail2" class="sr-only">Name</label>
+    <%= f.text_field :name, :class => "form-control", :placeholder => "Name" %>
+  </div>
+
+  <div class="form-group mx-sm-3 mb-2">
+     <label for="inputPassword2" class="sr-only">Email</label>
+    <%= f.text_field :email, :class => "form-control", :placeholder => "Email" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign Up", :class => "btn btn-primary fbcol mb-2" %>
+  </div>
+<% end %>
+</div>
+
+    </div>
+    <div class="col-lg-4 col-sm-12">
+      <div class="blogpart">
+             
+            <%= render @allvlogs %>
+          </div> 
+          <div class="holdgdonate">
+              <br>
+             <!--  <img src="https://res.cloudinary.com/nikasemo/image/upload/v1517520811/shortcodedonation_papani.jpg" class="img-fluid"> -->
+              <br>
+              <br>
+            </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+
+
+

@@ -5,14 +5,18 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    
+     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
     <script src="https://use.fontawesome.com/fc6d352727.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/trix/1.0.0/trix-core.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/trix/1.0.0/trix.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Istok+Web:400,400i,700,700i|Oleo+Script:400,700|Paytone+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/trix/1.0.0/trix.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
 
     <style type="text/css">
   a {
@@ -260,13 +264,13 @@ font-family: 'Open Sans', sans-serif;
       </li>
          
             <li class="nav-item">
-              <a class="nav-link" href="#!">Announcements</a>
+              <a class="nav-link" href="/announcements">Announcements</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#!">Devotionals</a>
+              <a class="nav-link" href="/posts">Devotionals</a>
             </li>
              <li class="nav-item">
-              <a class="nav-link" href="#!">Audio Messages</a>
+              <a class="nav-link" href="/podcasts">Audio Messages</a>
             </li>
              <li class="nav-item <%= 'active' if current_page?(churchgallery_path) %>">
               <a class="nav-link" href="/churchgallery">Gallery</a>

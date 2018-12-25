@@ -1,0 +1,115 @@
+<script src="audio.min.js"></script>
+    <!-- <link rel="stylesheet" href="audiome.css"> -->
+    <script>
+      audiojs.events.ready(function() {
+        audiojs.createAll();
+      });
+    </script>
+<style type="text/css">
+
+.divederlined {
+  height: 1.5px;
+  background-color: #e2b500; 
+}
+
+  .imageshadow {
+    -webkit-box-shadow: 0px 3px 29px -4px rgba(0,0,0,0.53);
+-moz-box-shadow: 0px 3px 29px -4px rgba(0,0,0,0.53);
+box-shadow: 0px 3px 29px -4px rgba(0,0,0,0.53);
+  }
+
+ .aduins{
+ background:linear-gradient(0deg,rgba(0, 0, 0,0.1),rgba(0, 0, 0,0.3)),url(https://res.cloudinary.com/nikasemo/image/upload/v1537494656/navbgback_j2ojki.png);
+  background-position:center;
+  min-height: 50px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.aduinsh1 {
+      text-align: center; 
+      color: #034e31; 
+      position: relative; 
+      top: 0px; 
+      font-weight: 900;  
+      text-shadow: 1px 0px 3px rgba(0, 0, 0, 0.5); 
+      font-family: 'Raleway', sans-serif;
+      font-size: 50px; 
+      line-height: 50px;
+    }
+
+.aduinsp1 {
+  text-align: center; 
+  color: white; 
+  position: relative; 
+  top: 55px;
+}
+
+.announrow {
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #aeaeae;
+  padding: 20px;
+  -webkit-box-shadow: 0px 3px 29px -4px rgba(0,0,0,0.5);
+-moz-box-shadow: 0px 3px 29px -4px rgba(0,0,0,0.5);
+box-shadow: 0px 3px 29px -4px rgba(0,0,0,0.5);
+}
+
+</style>
+
+<body style="background-color: #eaeaea;">
+
+<section class="aduins">
+      <div class="container">
+        <div class="row" style="margin-top: 70px">
+          <div class="col-lg-12">
+            <h1 style="font-family: 'Raleway', sans-serif;" class="aduinsh1">
+             Announcements
+            </h1>
+           <!--  <p style="" class="aduinsp1">
+              To be the best in business education and business research in Africa
+            </p> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+<section class="py-5 aboutwistech">    
+
+<div class="container">
+
+ <% @announcements.each do |announcement| %>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="row announrow" style="margin-bottom: 30px;">
+        <div class="col-lg-4">
+          <img src="<%= announcement.announcementimage %>" class="img-fluid imageshadow">
+        </div>
+        <div class="col-lg-8">
+          <h4 style="font-family: 'Raleway', sans-serif; color: #034e31;"><%= announcement.title %></h4>
+          <hr align="left" width="10%" class="divederlined">
+          <p style="font-family: 'Open Sans', sans-serif; font-weight: 300;"><%= announcement.description %></p>
+          <p style="font-family: 'Open Sans', sans-serif; font-weight: 500; font-size: 12px;"><%= announcement.updated_at.strftime("%B %-d, %Y") %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+ <% end %>
+
+<!-- <div class="container">
+  <%= @announcements %>
+</div> -->
+
+<%= link_to 'New Announcement', new_announcement_path %>
+
+</div>
+
+</section>
+
+</body>

@@ -1,0 +1,40 @@
+<%= form_for(vlog) do |f| %>
+  <% if vlog.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(vlog.errors.count, "error") %> prohibited this vlog from being saved:</h2>
+
+      <ul>
+      <% vlog.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :embed %>
+    <%= f.text_field :embed, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :author %>
+    <%= f.text_field :author, :class => "form-control" %>
+  </div>
+  <label>Video Image</label>
+  <%= f.file_field :vlogimage, :class => "form-control" %>
+<hr>
+  <div class="actions">
+    <%= f.submit "New Video", :class => "btn btn-primary" %>
+  </div>
+  </div>
+<% end %>

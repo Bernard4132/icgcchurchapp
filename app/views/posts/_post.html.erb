@@ -15,7 +15,12 @@
 					<span style="font-weight: 300;">
 					<%=post.shortdescription %></span>
 					<br>
-					<span><%= link_to "read post", post, :target => "_blank", :style => "color: #000000; font-size: 14px; font-weight: 500;" %> </span>
+					<span><%= link_to "read post", post, :target => "_blank", :style => "color: #000000; font-size: 14px; font-weight: 500;" %>
+					<% if signed_in? %>
+		            <%= link_to ' | Edit', edit_post_path(post) %>
+		            <%= link_to ' | Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+		            <% end %> 
+					 </span>
 				</p>
 					</div>
 				</div>

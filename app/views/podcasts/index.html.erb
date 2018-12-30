@@ -95,6 +95,7 @@ box-shadow: 0px 3px 29px -4px rgba(0,0,0,0.5);
               <p style="font-family: 'Open Sans', sans-serif; font-weight: 500; font-size: 12px; margin-top: 20px;"><%= podcast.updated_at.strftime("%B %-d, %Y") %> | <a href="<%= podcast.audiotrack %>" download>Download</a>
               <% if signed_in? %> 
              <%= link_to ' | Edit', edit_podcast_path(podcast) %>
+             <%= link_to ' | Destroy', podcast, method: :delete, data: { confirm: 'Are you sure?' } %>
              <% end %>
                </p>
             </div>
